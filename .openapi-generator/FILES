@@ -1,4 +1,3 @@
-.openapi-generator-ignore
 README.md
 README.md
 lib/Models/DeviceStatusDto.cpp
@@ -9,9 +8,6 @@ lib/Models/Helpers.cpp
 lib/Models/Helpers.h
 lib/Models/OrderStatusDto.cpp
 lib/Models/OrderStatusDto.h
-lib/TestFiles/DeviceStatusDtoTest.cpp
-lib/TestFiles/DeviceTokenDtoTest.cpp
-lib/TestFiles/OrderStatusDtoTest.cpp
 lib/service/AbstractService.cpp
 lib/service/AbstractService.h
 lib/service/DeviceApi.cpp
