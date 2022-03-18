@@ -53,7 +53,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install --upgrade platformio
     - name: Run PlatformIO
-      run: pio ci --project-option="lib_deps = https://github.com/steinwurf/bourne.git#9.0.0" --project-option="extra_scripts = pre_compiling_bourne.py" --keep-build-dir --build-dir ./ src
+      run: pio ci -c platformio.ini --keep-build-dir --build-dir ./ src
     - name: Package library
       run: pio package pack
     - name: Publish library
