@@ -13,7 +13,8 @@ namespace Tiny {
 class Service {
     public:
         HTTPClient http;
-        std::string basepath = "https://petstore3.swagger.io/api/v3"; // TODO: change to your url
+        std::string basepath = "https://cheffy-api.thystreet.com/api/v1";
+        void setAuthorization(const char *username, const char *password);
         std::string url = "";
         std::string payload = "";
         std::list<std::tuple<std::string, std::string>> queryParams;
@@ -29,7 +30,7 @@ class Service {
         // Go and comment out a certificate in root.cert, if you get an error here
         // Certificate from file
         const char* test_root_ca =
-        #include "../../root.cert"
+        #include "../../v1/root.cert"
         ;
 
     private:
