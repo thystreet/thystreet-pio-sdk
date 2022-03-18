@@ -10,7 +10,7 @@ void Tiny::Service::begin(std::string url){
     formParams.begin();
 }
 
-void Tiny::AbstractService::setAuthorization(const char *username, const char *password)
+void Tiny::Service::setAuthorization(const char *username, const char *password)
 {
     http.setAuthorization(username, password);
 }
