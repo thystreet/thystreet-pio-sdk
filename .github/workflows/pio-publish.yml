@@ -53,8 +53,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install --upgrade platformio
     - name: Run PlatformIO
-      run: pio ci --board=esp32cam --project-option="lib_deps = https://github.com/steinwurf/bourne.git#9.0.0" --project-option="extra_scripts = pre_compiling_bourne.py" --keep-build-dir --build-dir ./ src
+      run: pio ci --project-option="lib_deps = https://github.com/steinwurf/bourne.git#9.0.0" --project-option="extra_scripts = pre_compiling_bourne.py" --keep-build-dir --build-dir ./ src
     - name: Package library
-      run: pio package pack --output thystreet_lib.tar.gz
+      run: pio package pack
     - name: Publish library
-      run: pio package publish thystreet_lib.tar.gz --owner thystreet --non-interactive
+      run: pio package publish --owner thystreet --non-interactive
