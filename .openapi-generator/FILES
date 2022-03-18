@@ -1,5 +1,4 @@
 README.md
-README.md
 lib/Models/DeviceTokenDto.cpp
 lib/Models/DeviceTokenDto.h
 lib/Models/Helpers.cpp
@@ -8,14 +7,13 @@ lib/Models/OrderStatusDto.cpp
 lib/Models/OrderStatusDto.h
 lib/Models/SetDeviceDetailsDto.cpp
 lib/Models/SetDeviceDetailsDto.h
-lib/TestFiles/SetDeviceDetailsDtoTest.cpp
-lib/service/AbstractService.cpp
-lib/service/AbstractService.h
 lib/service/DeviceApi.cpp
 lib/service/DeviceApi.h
 lib/service/OrderApi.cpp
 lib/service/OrderApi.h
 lib/service/Response.h
+lib/service/Service.cpp
+lib/service/Service.h
 platformio.ini
 pre_compiling_bourne.py
 root.cert
