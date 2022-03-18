@@ -22,30 +22,30 @@ OrderStatusDto::~OrderStatusDto()
 
 void
 OrderStatusDto::fromJson(std::string jsonObj)
-{   
+{
     bourne::json object = bourne::json::parse(jsonObj);
 
     const char *orderIdKey = "orderId";
-    
-    if(object.has_key(orderIdKey)) 
+
+    if(object.has_key(orderIdKey))
     {
         bourne::json value = object[orderIdKey];
 
 
-        
+
         jsonToValue(&orderId, value, "std::string");
 
 
     }
 
     const char *statusKey = "status";
-    
-    if(object.has_key(statusKey)) 
+
+    if(object.has_key(statusKey))
     {
         bourne::json value = object[statusKey];
 
 
-        
+
         jsonToValue(&status, value, "std::string");
 
 
@@ -59,14 +59,14 @@ OrderStatusDto::toJson()
 {
     bourne::json object = bourne::json::object();
 
-    
+
 
 
 
     object["orderId"] = getOrderId();
 
 
-    
+
 
 
 

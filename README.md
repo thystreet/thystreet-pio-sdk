@@ -1,6 +1,6 @@
 # Documentation for OpenAPI Petstore
 This is a client generator for microcontrollers on the Espressif32 platform and the Arduino framework
-After the client have been generated, you have to change these following variablies:
+After the client have been generated, you have to change these following variables:
 - root.cert | Provide your service root certificate.
 - src/main.cpp | Change wifi name
 - src/main.cpp | Change wifi password
@@ -47,5 +47,4 @@ All URIs are relative to https://cheffy-api.thystreet.comhttps://cheffy-api.thys
 |*DeviceTokenDto* | |
 |*OrderStatusDto* | |
 |*SetDeviceDetailsDto* | |
-
 
