@@ -51,7 +51,48 @@ using namespace Tiny;
             String
         >
         DeviceApi::
-        setDeviceToken(
+        setDetails(
+            
+            SetDeviceDetailsDto setDeviceDetailsDto
+            
+        )
+        {
+            std::string url = basepath + "/device/details"; //
+            // Query    | 
+            // Headers  | 
+            // Form     | 
+            // Body     | setDeviceDetailsDto
+
+
+            begin(url);
+
+            std::string payload = "";
+            // Send Request
+            // METHOD | PUT
+            http.addHeader("Content-Type", "application/json");
+
+
+
+            payload = setDeviceDetailsDto.toJson().dump();
+
+            int httpCode = http.sendRequest("PUT", reinterpret_cast<uint8_t*>(&payload[0]), payload.length());
+
+            // Handle Request
+            String output = http.getString();
+            std::string output_string = output.c_str();
+
+            http.end();
+
+
+            Response<String> response(output, httpCode);
+            return response;
+        }
+
+        Response<
+            String
+        >
+        DeviceApi::
+        setToken(
             
             DeviceTokenDto deviceTokenDto
             
@@ -74,47 +115,6 @@ using namespace Tiny;
 
 
             payload = deviceTokenDto.toJson().dump();
-
-            int httpCode = http.sendRequest("PUT", reinterpret_cast<uint8_t*>(&payload[0]), payload.length());
-
-            // Handle Request
-            String output = http.getString();
-            std::string output_string = output.c_str();
-
-            http.end();
-
-
-            Response<String> response(output, httpCode);
-            return response;
-        }
-
-        Response<
-            String
-        >
-        DeviceApi::
-        setStatus(
-            
-            DeviceStatusDto deviceStatusDto
-            
-        )
-        {
-            std::string url = basepath + "/device/status"; //
-            // Query    | 
-            // Headers  | 
-            // Form     | 
-            // Body     | deviceStatusDto
-
-
-            begin(url);
-
-            std::string payload = "";
-            // Send Request
-            // METHOD | PUT
-            http.addHeader("Content-Type", "application/json");
-
-
-
-            payload = deviceStatusDto.toJson().dump();
 
             int httpCode = http.sendRequest("PUT", reinterpret_cast<uint8_t*>(&payload[0]), payload.length());
 
