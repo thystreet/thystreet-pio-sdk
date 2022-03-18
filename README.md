@@ -6,7 +6,7 @@ After the client have been generated, you have to change these following variabl
 - src/main.cpp | Change wifi password
 - lib/service/AbstractService.h | Change to your url
 
-# Documentation for ThyStreet 0.0.1 Tiny client cpp (Arduino) 
+# Documentation for Thy Street 0.0.2 Tiny client cpp (Arduino) 
 
 The project is structured like this:
 ```
@@ -31,20 +31,21 @@ All URIs are relative to https://cheffy-api.thystreet.comhttps://cheffy-api.thys
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
 |*generateToken* | *GET* /device/generate/{deviceId} | .|
-|*setDeviceToken* | *PUT* /device/token | .|
-|*setStatus* | *PUT* /device/status | .|
+|*setDetails* | *PUT* /device/details | .|
+|*setToken* | *PUT* /device/token | .|
 
 ### OrderApi
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
+|*getOrderById* | *GET* /order/params/{orderToken} | .|
 |*setStatus* | *PUT* /order/status | .|
 
 
 ## What are the Model files for the data structures/objects?
 |Class | Description|
 |------------- | -------------|
-|*DeviceStatusDto* | |
 |*DeviceTokenDto* | |
 |*OrderStatusDto* | |
+|*SetDeviceDetailsDto* | |
 
 

@@ -27,6 +27,20 @@ public:
     * .
     *
     * 
+    * \param orderToken This is the id recieved from the qrcode *Required*
+    */
+    Response<
+            String
+        >
+    getOrderById(
+            
+            std::string orderToken
+            
+    );
+    /**
+    * .
+    *
+    * 
     * \param orderStatusDto  *Required*
     */
     Response<

@@ -1,9 +1,9 @@
 
-#include "DeviceStatusDtoTest.cpp"
-
 #include "DeviceTokenDtoTest.cpp"
 
 #include "OrderStatusDtoTest.cpp"
+
+#include "SetDeviceDetailsDtoTest.cpp"
 
 
 
@@ -12,13 +12,6 @@ void setUp(){}
 void tearDown(){}
 
 void runTests(){
-    
-    
-    RUN_TEST(test_DeviceStatusDto_available_is_assigned_from_json);
-    
-    
-    RUN_TEST(test_DeviceStatusDto_deviceId_is_assigned_from_json);
-    
     
     
     RUN_TEST(test_DeviceTokenDto_deviceId_is_assigned_from_json);
@@ -34,14 +27,14 @@ void runTests(){
     RUN_TEST(test_OrderStatusDto_status_is_assigned_from_json);
     
     
+    
+    RUN_TEST(test_SetDeviceDetailsDto_deviceId_is_assigned_from_json);
+    
+    
+    RUN_TEST(test_SetDeviceDetailsDto_tariff_is_assigned_from_json);
+    
+    
 
-    
-    
-    RUN_TEST(test_DeviceStatusDto_available_is_converted_to_json);
-    
-    
-    RUN_TEST(test_DeviceStatusDto_deviceId_is_converted_to_json);
-    
     
     
     RUN_TEST(test_DeviceTokenDto_deviceId_is_converted_to_json);
@@ -55,6 +48,13 @@ void runTests(){
     
     
     RUN_TEST(test_OrderStatusDto_status_is_converted_to_json);
+    
+    
+    
+    RUN_TEST(test_SetDeviceDetailsDto_deviceId_is_converted_to_json);
+    
+    
+    RUN_TEST(test_SetDeviceDetailsDto_tariff_is_converted_to_json);
     
     
 

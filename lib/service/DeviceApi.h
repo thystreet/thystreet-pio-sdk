@@ -8,8 +8,8 @@
 #include "Helpers.h"
 #include <list>
 
-#include "DeviceStatusDto.h"
 #include "DeviceTokenDto.h"
+#include "SetDeviceDetailsDto.h"
 
 namespace Tiny {
 
@@ -42,28 +42,28 @@ public:
     * .
     *
     * 
-    * \param deviceTokenDto  *Required*
+    * \param setDeviceDetailsDto  *Required*
     */
     Response<
             String
         >
-    setDeviceToken(
+    setDetails(
             
-            DeviceTokenDto deviceTokenDto
+            SetDeviceDetailsDto setDeviceDetailsDto
             
     );
     /**
     * .
     *
     * 
-    * \param deviceStatusDto  *Required*
+    * \param deviceTokenDto  *Required*
     */
     Response<
             String
         >
-    setStatus(
+    setToken(
             
-            DeviceStatusDto deviceStatusDto
+            DeviceTokenDto deviceTokenDto
             
     );
 }; 
