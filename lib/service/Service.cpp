@@ -10,6 +10,12 @@ void Tiny::Service::begin(std::string url){
     formParams.begin();
 }
 
+void Tiny::AbstractService::setAuthorization(const char *username, const char *password)
+{
+    http.setAuthorization(username, password);
+}
+ 
+
 void Tiny::Service::addHeader(std::string key, std::string value){
     http.addHeader(String(key.c_str()), String(value.c_str()));
 }
