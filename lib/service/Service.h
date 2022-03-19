@@ -30,7 +30,7 @@ class Service {
         // Go and comment out a certificate in root.cert, if you get an error here
         // Certificate from file
         const char* test_root_ca =
-        #include "../../v1/root.cert"
+        #include "../../root.cert"
         ;
 
     private:
