@@ -12,7 +12,7 @@ on:
   release:
     types: [published]
 env:
-  PLATFORMIO_AUTH_TOKEN : ${secrets.PIO_TOKEN}
+  PLATFORMIO_AUTH_TOKEN : ${{secrets.PIO_TOKEN}}
 
 jobs:
   deploy:
