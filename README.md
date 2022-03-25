@@ -1,31 +1,9 @@
-# Documentation for OpenAPI Petstore
+# Documentation for Thy Street SDK
 This is a client generator for microcontrollers on the Espressif32 platform and the Arduino framework
-After the client have been generated, you have to change these following variables:
-- root.cert | Provide your service root certificate.
-- src/main.cpp | Change wifi name
-- src/main.cpp | Change wifi password
-- lib/service/AbstractService.h | Change to your url
 
-# Documentation for Thy Street 0.0.2 Tiny client cpp (Arduino) 
+# Documentation for Thy Street 0.0.2 cpp client (Arduino) 
 
-The project is structured like this:
-```
-samples/client/petstore/tiny/cpp/
-├── lib
-│   ├── Models
-│   ├── service
-│   └── TestFiles
-├── platformio.ini
-├── pre_compiling_bourne.py
-├── README.md
-├── root.cert
-├── src
-│   └── main.cpp
-└── test
-    └── RunTests.cpp
-```
-
-All URIs are relative to https://cheffy-api.thystreet.comhttps://cheffy-api.thystreet.com/api/v1
+All URIs are relative to https://cheffy-api.thystreet.com/api/v1
 
 ### DeviceApi
 |Method | HTTP request | Description|

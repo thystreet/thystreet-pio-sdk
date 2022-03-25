@@ -1,5 +1,4 @@
 #include "DeviceApi.h"
-#include "OrderApi.h"
 
 const char* ssid = "your wifi name"; // TODO Change wifi name
 const char* password = "Your wifi password"; //TODO Change wifi password
@@ -28,6 +27,15 @@ void setup(){
     Serial.print("IP address set: ");
     Serial.println(WiFi.localIP());
 
+    Tiny::DeviceApi api;
+    api.setAuthorization(apiKey, apiSecret);
+
+    Tiny::DeviceStatusDto dto;
+    dto.setAvailable(true);
+    dto.setDeviceId("device-id");
+    auto resp = api.setStatus(dto);
+    Serial.println(resp.code);
+    Serial.println(resp.obj.c_str());
 }
 
 void loop(){}
