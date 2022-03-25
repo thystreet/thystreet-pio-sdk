@@ -54,6 +54,8 @@ jobs:
         pip install --upgrade platformio
     - name: Run PlatformIO
       run: pio ci -c platformio.ini --keep-build-dir --build-dir ./ src
+    - name: Add Examples
+      run: mv src Examples
     - name: Package library
       run: pio package pack
     - name: Publish library
