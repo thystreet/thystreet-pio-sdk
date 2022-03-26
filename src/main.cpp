@@ -3,6 +3,8 @@
 const char* ssid = "your wifi name"; // TODO Change wifi name
 const char* password = "Your wifi password"; //TODO Change wifi password
 
+const char* apiKey = "Thy Street API key"; // TODO Change wifi name
+const char* apiSecret = "Thy Street API secret"; //TODO Change wifi password
 
 void setup(){
     //Initialize serial and wait for port to open:
