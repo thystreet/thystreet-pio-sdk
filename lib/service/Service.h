@@ -34,6 +34,7 @@ class Service {
         ;
 
     private:
+        std::list<std::tuple<std::string, std::string>> _customheaders;
         void begin(std::string url);
         void prepareRequest();
         std::string encodeKeyValueTuple(std::list<std::tuple<std::string, std::string>> params);
