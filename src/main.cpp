@@ -31,9 +31,9 @@ void setup(){
 
     Tiny::DeviceApi api;
     api.setAuthorization(apiKey, apiSecret);
-    
+
     Tiny::SetDeviceDetailsDto ddDto;
-    ddDto.setDeviceId('device-id');
+    ddDto.setDeviceId("device-id");
     ddDto.setTariff(pdTRUE);
     auto resp = api.setDetails(ddDto);
     Serial.println(resp.code);
