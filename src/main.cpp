@@ -31,11 +31,11 @@ void setup(){
 
     Tiny::DeviceApi api;
     api.setAuthorization(apiKey, apiSecret);
-
-    Tiny::DeviceStatusDto dto;
-    dto.setAvailable(true);
-    dto.setDeviceId("device-id");
-    auto resp = api.setStatus(dto);
+    
+    Tiny::SetDeviceDetailsDto ddDto;
+    ddDto.setDeviceId('device-id');
+    ddDto.setTariff(pdTRUE);
+    auto resp = api.setDetails(ddDto);
     Serial.println(resp.code);
     Serial.println(resp.obj.c_str());
 }
