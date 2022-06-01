@@ -27,7 +27,7 @@ public:
     * .
     *
     * 
-    * \param orderToken This is the id recieved from the qrcode *Required*
+    * \param orderToken This is the id recieved from the qrcode or on your webhook *Required*
     */
     Response<
             String
@@ -41,12 +41,16 @@ public:
     * .
     *
     * 
+    * \param orderToken This is the id recieved from the qrcode or on your webhook *Required*
     * \param orderStatusDto  *Required*
     */
     Response<
             String
         >
     setStatus(
+            
+            std::string orderToken
+            , 
             
             OrderStatusDto orderStatusDto
             

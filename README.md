@@ -9,14 +9,14 @@ All URIs are relative to https://cheffy-api.thystreet.com/api/v1
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
 |*generateToken* | *GET* /device/generate/{deviceId} | .|
-|*setDetails* | *PUT* /device/details | .|
+|*setDetails* | *PUT* /device/details | Toggle your device tariff when your device goes online using this api..|
 |*setToken* | *PUT* /device/token | .|
 
 ### OrderApi
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
 |*getOrderById* | *GET* /order/params/{orderToken} | .|
-|*setStatus* | *PUT* /order/status | .|
+|*setStatus* | *PUT* /order/status/{orderToken} | .|
 
 
 ## What are the Model files for the data structures/objects?

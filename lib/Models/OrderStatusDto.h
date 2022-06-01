@@ -45,13 +45,6 @@ public:
 	 */
     void fromJson(std::string jsonObj);
 
-	/*! \brief Get Order ID
-	 */
-	std::string getOrderId();
-
-	/*! \brief Set Order ID
-	 */
-	void setOrderId(std::string  orderId);
 	/*! \brief Get Set order status
 	 */
 	std::string getStatus();
@@ -62,7 +55,6 @@ public:
 
 
     private:
-    std::string orderId{};
     std::string status{};
 };
 }

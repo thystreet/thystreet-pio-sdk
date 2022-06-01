@@ -39,7 +39,7 @@ public:
             
     );
     /**
-    * .
+    * Toggle your device tariff when your device goes online using this api..
     *
     * 
     * \param setDeviceDetailsDto  *Required*
