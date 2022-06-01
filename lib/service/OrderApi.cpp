@@ -56,11 +56,14 @@ using namespace Tiny;
         OrderApi::
         setStatus(
             
+            std::string orderToken
+            , 
+            
             OrderStatusDto orderStatusDto
             
         )
         {
-            std::string url = basepath + "/order/status"; //
+            std::string url = basepath + "/order/status/{orderToken}"; //orderToken 
 
 
             // Headers  | 
@@ -72,6 +75,14 @@ using namespace Tiny;
 
 
 
+                std::string s_orderToken("{");
+                s_orderToken.append("orderToken");
+                s_orderToken.append("}");
+
+                int pos = url.find(s_orderToken);
+
+                url.erase(pos, s_orderToken.length());
+                url.insert(pos, stringify(orderToken));
 
 
             std::string payload = "";

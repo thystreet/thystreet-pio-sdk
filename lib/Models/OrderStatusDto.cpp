@@ -6,7 +6,6 @@ using namespace Tiny;
 
 OrderStatusDto::OrderStatusDto()
 {
-	orderId = std::string();
 	status = std::string();
 }
 
@@ -24,19 +23,6 @@ void
 OrderStatusDto::fromJson(std::string jsonObj)
 {
     bourne::json object = bourne::json::parse(jsonObj);
-
-    const char *orderIdKey = "orderId";
-
-    if(object.has_key(orderIdKey))
-    {
-        bourne::json value = object[orderIdKey];
-
-
-
-        jsonToValue(&orderId, value, "std::string");
-
-
-    }
 
     const char *statusKey = "status";
 
@@ -63,31 +49,12 @@ OrderStatusDto::toJson()
 
 
 
-    object["orderId"] = getOrderId();
-
-
-
-
-
-
     object["status"] = getStatus();
 
 
 
     return object;
 
-}
-
-std::string
-OrderStatusDto::getOrderId()
-{
-	return orderId;
-}
-
-void
-OrderStatusDto::setOrderId(std::string  orderId)
-{
-	this->orderId = orderId;
 }
 
 std::string

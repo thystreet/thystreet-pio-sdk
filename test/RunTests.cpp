@@ -21,9 +21,6 @@ void runTests(){
     
     
     
-    RUN_TEST(test_OrderStatusDto_orderId_is_assigned_from_json);
-    
-    
     RUN_TEST(test_OrderStatusDto_status_is_assigned_from_json);
     
     
@@ -42,9 +39,6 @@ void runTests(){
     
     RUN_TEST(test_DeviceTokenDto_token_is_converted_to_json);
     
-    
-    
-    RUN_TEST(test_OrderStatusDto_orderId_is_converted_to_json);
     
     
     RUN_TEST(test_OrderStatusDto_status_is_converted_to_json);
